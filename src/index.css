@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', 'Cormorant Garamond', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    
+    --color-cream: #FAF8F5;
+    --color-ivory: #F4EFEB;
+    --color-charcoal: #1C1917;
+    --color-burgundy: #4A1521;
+    --color-wine: #310D15;
+    --color-gold: #C5A880;
+    --color-gold-light: #E7D7C1;
+    --color-gold-dark: #9E7B4F;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8F5;
+    color: #24211E;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom Luxury Effects */
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #C5A880 0%,
+    #F3E9DA 25%,
+    #C5A880 50%,
+    #9E7B4F 75%,
+    #C5A880 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #C5A880, #F3E9DA, #9E7B4F) 1;
+}
+
+.subtle-paper-texture {
+  background-color: #FAF8F5;
+  background-image: radial-gradient(#C5A880 0.5px, transparent 0.5px), radial-gradient(#C5A880 0.5px, #FAF8F5 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-opacity: 0.03;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F4EFEB;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9E7B4F;
+}
