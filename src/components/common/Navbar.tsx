@@ -50,15 +50,16 @@ export const Navbar: React.FC<NavbarProps> = ({
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Brand Logo - 2x visual size while preserving compact navbar height */}
         <button
           onClick={() => handleNavClick('home')}
-          className="group flex items-center gap-3 text-left cursor-pointer focus:outline-none"
+          className="group h-10 sm:h-12 flex items-center text-left cursor-pointer focus:outline-none relative overflow-visible"
+          aria-label="Subham Cards Home"
         >
           <img
             src="/logo.png"
             alt="Subham Cards"
-            className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+            className="h-16 sm:h-20 md:h-24 w-auto max-w-none object-contain transition-transform duration-200 group-hover:scale-[1.03]"
           />
         </button>
 
